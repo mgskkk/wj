@@ -23,5 +23,5 @@ jobs:
           # 配置源仓库（你的GitHub仓库）
           source-repo: 'git@github.com:mgskkk/wj.git'
           # 配置目标仓库（你的Gitee仓库）【必须修改】
-          destination-repo: 'git@gitee.com:louie/wj.git'
+          destination-repo: 'git@gitee.com:mgskkk/wj.git'
           # 注意：请将上面的“你的Gitee用户名/你的仓库名”替换为实际值
