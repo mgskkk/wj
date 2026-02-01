@@ -1,3 +1,24 @@
+      - name: Test SSH Connection to Gitee
+        run: |
+          mkdir -p ~/.ssh
+          # 1. 将私钥写入文件并检查其格式
+          echo "${{ secrets.GITEE_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          
+          echo "=== 检查私钥文件头尾 ==="
+          head -n 2 ~/.ssh/id_rsa
+          echo "..."
+          tail -n 2 ~/.ssh/id_rsa
+          echo ""
+          
+          echo "=== 计算私钥指纹 (对应公钥指纹) ==="
+          # 这个命令会输出一个类似 SHA256:xxxxxxxx 的指纹
+          ssh-keygen -lf ~/.ssh/id_rsa
+          echo ""
+          
+          # 2. 进行详细的SSH连接测试
+          ssh -T -v -o StrictHostKeyChecking=no git@gitee.com 2>&1 | grep -A5 -B5 "Authentication succeeded\|Permission denied"
+
 name: 'Sync to Gitee'
 on: # 触发条件：可以按需选择或组合
   push: # 当向 main 分支推送代码时触发
