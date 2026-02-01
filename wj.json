@@ -6,17 +6,17 @@
     },
     
     {
-      "name": "无界kid",
+      "name": "无界kid",// 可自定义名称
       "url": "http://www.xn--rgv465a.top/kids.json"
     },
     
     {
-      "name": "XO",
+      "name": "XO",// 可自定义名称
       "url": "https://gitee.com/mgskkk/fan/raw/main/xo.json"
     },
 
     {
-      "name": "饭太硬",
+      "name": "饭太硬",// 可自定义名称
       "url": "http://www.饭太硬.com/tv"
     }
 
