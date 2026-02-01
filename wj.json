@@ -8,7 +8,17 @@
     {
       "name": "无界kid",
       "url": "http://www.xn--rgv465a.top/kids.json"
-    }
+    },
     
+    {
+      "name": "XO",
+      "url": "https://gitee.com/mgskkk/fan/raw/main/xo.json"
+    },
+
+    {
+      "name": "饭太硬",
+      "url": "http://www.饭太硬.com/tv"
+    }
+
   ]
 }
